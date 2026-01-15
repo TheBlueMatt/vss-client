@@ -14,8 +14,9 @@ categories = ["web-programming::http-client", "cryptography::cryptocurrencies"]
 build = "build.rs"
 
 [features]
-default = ["lnurl-auth"]
+default = ["lnurl-auth", "sigs-auth"]
 lnurl-auth = ["dep:bitcoin", "dep:url", "dep:serde", "dep:serde_json", "reqwest/json"]
+sigs-auth = ["dep:bitcoin"]
 
 [dependencies]
 prost = "0.11.6"

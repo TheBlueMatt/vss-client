@@ -12,6 +12,9 @@ mod lnurl_auth_jwt;
 #[cfg(feature = "lnurl-auth")]
 pub use lnurl_auth_jwt::LnurlAuthToJwtProvider;
 
+#[cfg(feature = "sigs-auth")]
+pub mod sigs_auth;
+
 /// Defines a trait around how headers are provided for each VSS request.
 #[async_trait]
 pub trait VssHeaderProvider: Send + Sync {
